@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.vorotov.simulationslab13.HelloController">
+  <children>
+    <ToolBar prefHeight="40.0" prefWidth="200.0">
+      <items>
+        <Button mnemonicParsing="false" onAction="#onCalcButtonClick" text="Calculate" />
+        <Button mnemonicParsing="false" onAction="#onStopButtonClick" text="Stop" />
+        <Label nodeOrientation="RIGHT_TO_LEFT" text="Dollar init price">
+          <graphic>
+            <TextField fx:id="dollarTextField" nodeOrientation="LEFT_TO_RIGHT" text="88" />
+          </graphic>
+        </Label>
+        <Label nodeOrientation="RIGHT_TO_LEFT" text="Euro init price">
+          <graphic>
+            <TextField fx:id="euroTextField" nodeOrientation="LEFT_TO_RIGHT" text="90" />
+          </graphic>
+        </Label>
+        <Label nodeOrientation="RIGHT_TO_LEFT" text="Days">
+          <graphic>
+            <TextField fx:id="daysField" nodeOrientation="LEFT_TO_RIGHT" text="10" />
+          </graphic>
+        </Label>
+      </items>
+    </ToolBar>
+    <LineChart fx:id="chart" animated="false" legendSide="RIGHT">
+      <xAxis>
+        <NumberAxis autoRanging="false" side="BOTTOM" upperBound="50.0" fx:id="xAxis" />
+      </xAxis>
+      <yAxis>
+        <NumberAxis fx:id="yAxis" autoRanging="false" lowerBound="80" prefWidth="28.0" side="LEFT" />
+      </yAxis>
+    </LineChart>
+  </children>
+</VBox>
